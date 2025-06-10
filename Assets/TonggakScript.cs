@@ -9,7 +9,7 @@ public class TonggakScript : MonoBehaviour
     public float erasePosition = -25;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

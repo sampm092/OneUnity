@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe66614976761d49917f68524b6228f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Logic: {fileID: 0}
 --- !u!1 &5593353066124893611
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,7 +195,7 @@ GameObject:
   - component: {fileID: 5593353066793316280}
   m_Layer: 0
   m_Name: tonggaks
-  m_TagString: Untagged
+  m_TagString: Tonggak
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb6a264c073bd0a4daec7888a7b1d1e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tonggakSpeed: 5
+  tonggakSpeed: 4
   erasePosition: -25
 --- !u!1 &5593353066917227430
 GameObject:
