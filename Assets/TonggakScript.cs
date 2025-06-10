@@ -5,7 +5,8 @@ using UnityEngine;
 public class TonggakScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float tonggakSpeed = 5;
+    public float tonggakSpeed = 4;
+    public float erasePosition = -25;
     void Start()
     {
         
@@ -15,5 +16,10 @@ public class TonggakScript : MonoBehaviour
     void Update()
     {
         transform.position = transform.position + Vector3.left * tonggakSpeed * Time.deltaTime;
+
+        if (transform.position.x < erasePosition)
+        {
+            Destroy(gameObject);
+        }
     }
 }
