@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LogicScript : MonoBehaviour
 {
@@ -9,11 +10,18 @@ public class LogicScript : MonoBehaviour
     public int score;
     public Text scoreText;
 
-[ContextMenu("Increase Score")]
+    [ContextMenu("Increase Score")]
     public void AddScore(int scoreAdd)
     {
         score += scoreAdd;
         scoreText.text = score.ToString();
     }
+
+    public void RetryGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    
     
 }
