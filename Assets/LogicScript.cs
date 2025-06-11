@@ -9,6 +9,7 @@ public class LogicScript : MonoBehaviour
     // Start is called before the first frame update
     public int score;
     public Text scoreText;
+    public GameObject gameOverScreen;
 
     [ContextMenu("Increase Score")]
     public void AddScore(int scoreAdd)
@@ -20,6 +21,11 @@ public class LogicScript : MonoBehaviour
     public void RetryGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GameOver()
+    {
+        gameOverScreen.SetActive(true);
     }
 
     

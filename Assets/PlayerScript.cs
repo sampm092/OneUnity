@@ -8,18 +8,21 @@ public class PlayerScript : MonoBehaviour
     public float jump;
     public float dash = 3;
     public float wait = 1;
-    // public TonggakScript TonggakS;
+    public LogicScript Logic;
+    public bool isAlive = true;
+    public TSpawnScript TonggakS;
     // Start is called before the first frame update
     void Start()
     {
-        // TonggakS = GameObject.FindGameObjectWithTag("Tonggak").GetComponent<TonggakScript>();
+        TonggakS = GameObject.FindGameObjectWithTag("Tonggak").GetComponent<TSpawnScript>();
+        Logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space) == true)
+        if (Input.GetKeyDown(KeyCode.Space) && isAlive) //is true
         {
             MyRigid.velocity = Vector2.up * jump;
         }
@@ -33,5 +36,13 @@ public class PlayerScript : MonoBehaviour
             MyRigid.velocity = Vector2.left * wait;
             //fire bullet to destroy wall
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        TonggakS.StopSpawn();
+        isAlive = false;
+        Logic.GameOver();
+        
     }
 }

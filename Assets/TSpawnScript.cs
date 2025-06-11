@@ -8,6 +8,7 @@ public class TSpawnScript : MonoBehaviour
     public float spawnRate = 2;
     public float heightOffset = 10;
     private float timer = 0;
+    public bool stop = true;
 
 
     // Start is called before the first frame update
@@ -25,8 +26,15 @@ public class TSpawnScript : MonoBehaviour
         }
         else
         {
-            SpawnTonggak();
-            timer = 0;
+            if (stop == true)
+            {
+                SpawnTonggak();
+                timer = 0;
+            }
+            else
+            {
+                
+            }
 
         }
     }
@@ -36,6 +44,11 @@ public class TSpawnScript : MonoBehaviour
         float lowestPoint = transform.position.y - heightOffset;
         float highestPoint = transform.position.y + heightOffset;
         Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
+    }
+
+    public void StopSpawn()
+    {
+        stop = false;
     }
     
 }

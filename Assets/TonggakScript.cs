@@ -7,6 +7,8 @@ public class TonggakScript : MonoBehaviour
     // Start is called before the first frame update
     public float tonggakSpeed = 4;
     public float erasePosition = -25;
+
+    
     void Start()
     {
 
@@ -22,4 +24,6 @@ public class TonggakScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    
 }
