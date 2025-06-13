@@ -10,11 +10,9 @@ public class PlayerScript : MonoBehaviour
     public float wait = 1;
     public LogicScript Logic;
     public bool isAlive = true;
-    public TSpawnScript TonggakS;
     // Start is called before the first frame update
     void Start()
     {
-        TonggakS = GameObject.FindGameObjectWithTag("Tonggak").GetComponent<TSpawnScript>();
         Logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
@@ -40,7 +38,6 @@ public class PlayerScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        TonggakS.StopSpawn();
         isAlive = false;
         Logic.GameOver();
         

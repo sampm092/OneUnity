@@ -8,10 +8,12 @@ public class TonggakScript : MonoBehaviour
     public float tonggakSpeed = 4;
     public float erasePosition = -25;
 
-    
+    public LogicScript LogicS;
+
+
     void Start()
     {
-
+        LogicS = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
@@ -23,7 +25,13 @@ public class TonggakScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (LogicS.isGameOver == true)
+        {
+            tonggakSpeed = 0;
+        }
     }
 
-    
+
+
 }
