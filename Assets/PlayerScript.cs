@@ -6,10 +6,14 @@ public class PlayerScript : MonoBehaviour
 {
     public Rigidbody2D MyRigid;
     public float jump;
-    public float dash = 3;
+    public float dash = 1;
+    public float dashTime = 0.2f;
     public float wait = 1;
     public LogicScript Logic;
     public bool isAlive = true;
+    public bool isDashing = false;
+    private Coroutine DashCoroutine;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +30,11 @@ public class PlayerScript : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(1))
         {
-            MyRigid.velocity = Vector2.right * dash;
+            // MyRigid.velocity = Vector2.right * dash;
+            if (DashCoroutine == null)
+            {
+                DashCoroutine = StartCoroutine(Dash());
+            }
             //when click fasten the spawn rate
         }
         if (Input.GetMouseButtonDown(0))
@@ -35,11 +43,22 @@ public class PlayerScript : MonoBehaviour
             //fire bullet to destroy wall
         }
     }
+    IEnumerator Dash()
+    {
+        isDashing = true;
+        float originalGravity = MyRigid.gravityScale;
+        MyRigid.velocity = new Vector2(dash, 0);
+
+        yield return new WaitForSeconds(dashTime);
+
+        isDashing = false;
+        DashCoroutine = null;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isAlive = false;
         Logic.GameOver();
-        
+
     }
 }

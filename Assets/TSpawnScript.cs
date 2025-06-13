@@ -9,33 +9,36 @@ public class TSpawnScript : MonoBehaviour
     public float heightOffset = 10;
     private float timer = 0;
     public bool stop = true;
+    public PlayerScript PScript;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         SpawnTonggak();
+
+        PScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer < spawnRate)
+        float dashSpeedMultiplier = 1.25f;
+        float interval = PScript.isDashing ? spawnRate / dashSpeedMultiplier : spawnRate;
+        timer += Time.deltaTime;
+        if (PScript.isAlive == false) //Prevent spawning tonggak after game over
         {
-            timer += Time.deltaTime;
+
         }
         else
         {
-            if (stop == true)
+            if (timer > interval)
             {
                 SpawnTonggak();
                 timer = 0;
-            }
-            else
-            {
-                
-            }
 
+            }
         }
     }
 
@@ -45,5 +48,5 @@ public class TSpawnScript : MonoBehaviour
         float highestPoint = transform.position.y + heightOffset;
         Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
     }
-    
+
 }

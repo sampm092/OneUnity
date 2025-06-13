@@ -8,19 +8,22 @@ public class TonggakScript : MonoBehaviour
     public float tonggakSpeed = 4;
     public float erasePosition = -25;
 
+    public float dashSpeedMultiplier = 1.25f;
     public LogicScript LogicS;
+    public PlayerScript PScript;
 
 
     void Start()
     {
         LogicS = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        PScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = transform.position + Vector3.left * tonggakSpeed * Time.deltaTime;
-
+        float currentSpeed = tonggakSpeed;
         if (transform.position.x < erasePosition)
         {
             Destroy(gameObject);
@@ -30,6 +33,13 @@ public class TonggakScript : MonoBehaviour
         {
             tonggakSpeed = 0;
         }
+
+        if (PScript.isDashing) // reference to your player script
+        {
+            currentSpeed *= dashSpeedMultiplier;
+        }
+
+        transform.position = transform.position + Vector3.left * currentSpeed * Time.deltaTime;
     }
 
 
