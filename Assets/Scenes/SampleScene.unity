@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: 954176691}
   m_Layer: 3
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -631,11 +631,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyRigid: {fileID: 954176690}
   jump: 10
-  dash: 5
+  dash: 0.5
+  dashTime: 0.2
   wait: 1
   Logic: {fileID: 0}
   isAlive: 1
-  TonggakS: {fileID: 0}
+  isDashing: 0
 --- !u!70 &954176692
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -764,6 +765,7 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 1369816109}
   gameOverScreen: {fileID: 763370710}
+  isGameOver: 0
 --- !u!4 &1490426737
 Transform:
   m_ObjectHideFlags: 0
@@ -946,6 +948,7 @@ MonoBehaviour:
   spawnRate: 2
   heightOffset: 5
   stop: 1
+  PScript: {fileID: 0}
 --- !u!4 &1804902889
 Transform:
   m_ObjectHideFlags: 0
