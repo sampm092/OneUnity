@@ -6,7 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
     public Rigidbody2D MyRigid;
     public float jump;
-    public float dash = 0.5f;
+    public float dash = 1f;
     public float dashTime = 0.2f;
     public float wait = 1;
     public LogicScript Logic;
