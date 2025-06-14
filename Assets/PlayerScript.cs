@@ -46,8 +46,8 @@ public class PlayerScript : MonoBehaviour
     IEnumerator Dash()
     {
         isDashing = true;
-        float originalGravity = MyRigid.gravityScale;
-        MyRigid.velocity = new Vector2(dash, 0);
+        // float originalGravity = MyRigid.gravityScale;
+        MyRigid.velocity = new Vector2(dash, 0); //move horizontally 
 
         yield return new WaitForSeconds(dashTime);
 

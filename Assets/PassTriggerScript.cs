@@ -6,7 +6,7 @@ public class PassTriggerScript : MonoBehaviour
 {
     public LogicScript Logic;
     public AudioClip Sfx;
-    private AudioSource AudioSource;
+    private AudioSource AudioSource; //
     private bool triggered = false;
 
     // Start is called before the first frame update
@@ -25,11 +25,7 @@ public class PassTriggerScript : MonoBehaviour
     //Theres also ontrigger exit and on trigger stay
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // if (collision.gameObject.layer == 3)
-        // {
-        // }
-
-        if (!triggered && collision.CompareTag("Player"))
+        if (!triggered && collision.CompareTag("Player")) //mengambil tag player
         {
             if (Sfx != null && AudioSource != null)
             {
@@ -38,9 +34,6 @@ public class PassTriggerScript : MonoBehaviour
             
             Logic.AddScore(1);
             triggered = true;
-
-
-            // Optional: add score logic here
         }
     }
 

@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Logic: {fileID: 0}
-  Sfx: {fileID: 8300000, guid: f67aa19f97aed2843938aa2bf8f8ad38, type: 3}
+  Sfx: {fileID: 8300000, guid: a3a7d339973c197409fbe110721d1688, type: 3}
 --- !u!1 &5593353066124893611
 GameObject:
   m_ObjectHideFlags: 0
