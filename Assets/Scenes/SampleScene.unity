@@ -1057,7 +1057,8 @@ MonoBehaviour:
   scoreText: {fileID: 1369816109}
   gameOverScreen: {fileID: 763370710}
   isGameOver: 0
-  Sfx: {fileID: 8300000, guid: 6b4ac7f7d15518344a536670a6cd8d48, type: 3}
+  Over: {fileID: 8300000, guid: 6b4ac7f7d15518344a536670a6cd8d48, type: 3}
+  Retry: {fileID: 8300000, guid: ef24a4d90b6de29428d021b2b82018a3, type: 3}
 --- !u!4 &1490426737
 Transform:
   m_ObjectHideFlags: 0
