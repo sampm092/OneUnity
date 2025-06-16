@@ -11,6 +11,8 @@ public class LogicScript : MonoBehaviour
     public Text scoreText;
     public GameObject gameOverScreen;
     public bool isGameOver = false;
+    public AudioClip Sfx;
+    private AudioSource AudioSource; //
 
     [ContextMenu("Increase Score")]
     public void AddScore(int scoreAdd)
@@ -26,10 +28,15 @@ public class LogicScript : MonoBehaviour
 
     public void GameOver()
     {
+        AudioSource = FindObjectOfType<AudioSource>();
         gameOverScreen.SetActive(true);
+        if (Sfx != null && AudioSource != null)
+        {
+            AudioSource.PlayOneShot(Sfx);
+        }
         isGameOver = true;
     }
 
-    
-    
+
+
 }
