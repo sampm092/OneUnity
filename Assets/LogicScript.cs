@@ -13,7 +13,7 @@ public class LogicScript : MonoBehaviour
     public bool isGameOver = false;
     public AudioClip Over;
     public AudioClip Retry;
-    private AudioSource AudioSource; //
+    // private AudioSource AudioSource; 
     private AudioSource AuRetry;
 
     [ContextMenu("Increase Score")]
