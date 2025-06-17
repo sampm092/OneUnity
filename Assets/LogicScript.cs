@@ -12,6 +12,7 @@ public class LogicScript : MonoBehaviour
     public GameObject gameOverScreen;
     public bool isGameOver = false;
     public AudioClip Over;
+    public PlayerScript PScript;
     public AudioClip Retry;
     // private AudioSource AudioSource; 
     private AudioSource AuRetry;
@@ -41,19 +42,27 @@ public class LogicScript : MonoBehaviour
 
     public void Exit()
     {
-        SceneManager.LoadScene("StartScene"); 
+        PScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
+        PScript.TogglePause();
+        SceneManager.LoadScene("StartScene");
+    }
+
+    public void Resume()
+    {
+        PScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
+        PScript.TogglePause();
     }
 
     IEnumerator ReloadSceneWithSound()
-{
-    if (Retry != null && AuRetry != null)
     {
-        AuRetry.PlayOneShot(Retry);
-        yield return new WaitForSeconds(0.2f); // Wait for sound to finish
-    }
+        if (Retry != null && AuRetry != null)
+        {
+            AuRetry.PlayOneShot(Retry);
+            yield return new WaitForSeconds(0.2f); // Wait for sound to finish
+        }
 
-    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-}
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
 
 

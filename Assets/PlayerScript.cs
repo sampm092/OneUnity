@@ -68,7 +68,7 @@ public class PlayerScript : MonoBehaviour
         Logic.GameOver();
 
     }
-    void TogglePause()
+    public void TogglePause()
 {
     isPaused = !isPaused;
 
