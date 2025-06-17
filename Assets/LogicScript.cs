@@ -39,6 +39,11 @@ public class LogicScript : MonoBehaviour
         isGameOver = true;
     }
 
+    public void Exit()
+    {
+        SceneManager.LoadScene("StartScene"); 
+    }
+
     IEnumerator ReloadSceneWithSound()
 {
     if (Retry != null && AuRetry != null)
