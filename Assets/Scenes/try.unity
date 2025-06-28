@@ -250,6 +250,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &687637459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 687637460}
+  m_Layer: 0
+  m_Name: bullet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &687637460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687637459}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.29, y: -1.2333332, z: 0}
+  m_LocalScale: {x: 3.333333, y: 3.333333, z: 1.2648622}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1585628676}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &941978058
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wall: {fileID: 8151566968315714060, guid: 098c62b60e46c53418e4ea773714ecdd, type: 3}
   spawnRate: 2
-  stop: 1
+  stop: 0
 --- !u!4 &1030227697
 Transform:
   m_ObjectHideFlags: 0
@@ -394,36 +425,14 @@ GameObject:
   - component: {fileID: 1585628675}
   - component: {fileID: 1585628674}
   - component: {fileID: 1585628673}
-  - component: {fileID: 1585628672}
+  - component: {fileID: 1585628677}
   m_Layer: 3
-  m_Name: player
+  m_Name: ufo
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1585628672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1585628671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b6ef2bde5730f149982e11599d0b861, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyRigid: {fileID: 1585628674}
-  PauseMenu: {fileID: 0}
-  jump: 10
-  dash: 0.5
-  dashTime: 0.2
-  wait: 1
-  Logic: {fileID: 0}
-  isAlive: 1
-  isDashing: 0
-  isPaused: 0
 --- !u!70 &1585628673
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -520,14 +529,31 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585628671}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.42, y: 0.46, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.7906}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 687637460}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1585628677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585628671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c767c6c04684904684df38b9d359ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyRigid: {fileID: 1585628674}
+  jump: 10
+  bullet: {fileID: 6472303953686831220, guid: 9462b5848c0bd36408d76a3e4efb429a, type: 3}
+  LaunchOffset: {fileID: 687637460}
 --- !u!1 &1947772233
 GameObject:
   m_ObjectHideFlags: 0
