@@ -24,6 +24,10 @@ public class UFOscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isAlive == false)
+        {
+            Destroy(MyRigid);
+        }
 
         if (Input.GetKeyDown(KeyCode.Space)) //is true
         {
