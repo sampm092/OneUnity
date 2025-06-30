@@ -13,6 +13,7 @@ public class LogicScript : MonoBehaviour
     public bool isGameOver = false;
     public AudioClip Over;
     public PlayerScript PScript;
+    public UFOscript UScript;
     public AudioClip Retry;
     // private AudioSource AudioSource; 
     private AudioSource AuRetry;
@@ -40,17 +41,30 @@ public class LogicScript : MonoBehaviour
         isGameOver = true;
     }
 
-    public void Exit()
+    public void Exit1()
     {
         PScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
         PScript.TogglePause();
         SceneManager.LoadScene("StartScene");
     }
 
-    public void Resume()
+    public void Resume1()
     {
         PScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
         PScript.TogglePause();
+    }
+
+    public void Exit2()
+    {
+        UScript = GameObject.FindGameObjectWithTag("Player").GetComponent<UFOscript>();
+        UScript.TogglePause();
+        SceneManager.LoadScene("StartScene");
+    }
+
+    public void Resume2()
+    {
+        UScript = GameObject.FindGameObjectWithTag("Player").GetComponent<UFOscript>();
+        UScript.TogglePause();
     }
 
     IEnumerator ReloadSceneWithSound()

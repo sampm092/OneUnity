@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,6 +17,7 @@ public class PlayerScript : MonoBehaviour
     public bool isDashing = false;
     private Coroutine DashCoroutine;
     public bool isPaused = false;
+    private int erasePos = -10;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,10 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isAlive == false)
+        {
+            Destroy(MyRigid);
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && isAlive) //is true
         {
@@ -33,7 +39,7 @@ public class PlayerScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape) && isAlive) //is true
         {
-           TogglePause();
+            TogglePause();
         }
         if (Input.GetMouseButtonDown(1))
         {
@@ -48,6 +54,12 @@ public class PlayerScript : MonoBehaviour
         {
             MyRigid.velocity = Vector2.left * wait;
             //fire bullet to destroy wall
+        }
+
+        if (isAlive && MyRigid.transform.position.y < erasePos)
+        {
+            isAlive = false;
+            Logic.GameOver();
         }
     }
     IEnumerator Dash()
@@ -69,10 +81,11 @@ public class PlayerScript : MonoBehaviour
 
     }
     public void TogglePause()
-{
-    isPaused = !isPaused;
+    {
+        isPaused = !isPaused;
 
-    Time.timeScale = isPaused ? 0 : 1;
-    PauseMenu.SetActive(isPaused); // Enable or disable pause menu UI
-}
+        Time.timeScale = isPaused ? 0 : 1;
+        PauseMenu.SetActive(isPaused); // Enable or disable pause menu UI
+    }
+    
 }

@@ -443,7 +443,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1490426736}
         m_TargetAssemblyTypeName: LogicScript, Assembly-CSharp
-        m_MethodName: Exit
+        m_MethodName: Exit1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1125,7 +1125,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1490426736}
         m_TargetAssemblyTypeName: LogicScript, Assembly-CSharp
-        m_MethodName: Resume
+        m_MethodName: Resume1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1423,6 +1423,7 @@ MonoBehaviour:
   isGameOver: 0
   Over: {fileID: 8300000, guid: 6b4ac7f7d15518344a536670a6cd8d48, type: 3}
   PScript: {fileID: 0}
+  UScript: {fileID: 0}
   Retry: {fileID: 8300000, guid: ef24a4d90b6de29428d021b2b82018a3, type: 3}
 --- !u!4 &1490426737
 Transform:

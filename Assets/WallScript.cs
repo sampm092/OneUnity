@@ -9,12 +9,12 @@ public class WallScript : MonoBehaviour
     public float erasePosition = -25;
 
     public float dashSpeedMultiplier = 1.25f;
-    // public LogicScript LogicS;
+    public LogicScript LScript;
     public PlayerScript PScript;
 
     void Start()
     {
-        
+        LScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
@@ -26,16 +26,10 @@ public class WallScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        // if (LogicS.isGameOver == true)
-        // {
-        //     tonggakSpeed = 0;
-        // }
-
-        // if (PScript.isDashing) // reference to your player script
-        // {
-        //     currentSpeed *= dashSpeedMultiplier;
-        // }
-
+        if (LScript.isGameOver == true)
+        {
+            tonggakSpeed = 0;
+        }
         transform.position = transform.position + Vector3.left * currentSpeed * Time.deltaTime;
     }
 }
