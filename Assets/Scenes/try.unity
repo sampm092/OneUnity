@@ -396,7 +396,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall: {fileID: 8151566968315714060, guid: 098c62b60e46c53418e4ea773714ecdd, type: 3}
-  spawnRate: 2
+  spawnRate: 3
+  heightOffset: 10
   stop: 0
 --- !u!4 &1030227697
 Transform:
@@ -406,7 +407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030227695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.08, y: 0.22, z: 0.023241345}
+  m_LocalPosition: {x: 25.08, y: 0.22, z: 0.023241345}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

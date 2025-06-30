@@ -5,7 +5,8 @@ using UnityEngine;
 public class WallSpwncript : MonoBehaviour
 {
     public GameObject wall;
-    public float spawnRate = 2;
+    public float spawnRate = 4;
+    public float heightOffset = 10;
     // public float heightOffset = 10;
     private float timer = 0;
     public bool stop = true;
@@ -41,6 +42,9 @@ public class WallSpwncript : MonoBehaviour
 
     void SpawnWall()
     {
-        Instantiate(wall, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+        float lowestPoint = transform.position.y - heightOffset;
+        float highestPoint = transform.position.y + heightOffset;
+        float RotatePoint = Random.Range(-30, 30);
+        Instantiate(wall, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint),0),  Quaternion.Euler(0, 0, RotatePoint));
     }
 }
