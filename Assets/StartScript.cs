@@ -5,10 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class StartScript : MonoBehaviour
 {
-
-    public GameObject StartMenuV1;
-    public GameObject StartMenuV2;
-    public GameObject ExitMenu;
     // Start is called before the first frame update
     void Start()
     {

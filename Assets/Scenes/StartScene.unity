@@ -208,7 +208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1624521554}
         m_TargetAssemblyTypeName: StartScript, Assembly-CSharp
-        m_MethodName: StartScene
+        m_MethodName: StartSceneV1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -611,7 +611,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1624521554}
         m_TargetAssemblyTypeName: StartScript, Assembly-CSharp
-        m_MethodName: StartScene
+        m_MethodName: StartSceneV2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1050,8 +1050,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f41fcf2514ba9074d9aafce2816f2eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartMenu: {fileID: 0}
-  ExitMenu: {fileID: 0}
 --- !u!4 &1624521555
 Transform:
   m_ObjectHideFlags: 0

@@ -33,7 +33,7 @@ public class UFOscript : MonoBehaviour
         {
             MyRigid.velocity = Vector2.up * jump;
         }
-        if (Input.GetMouseButtonDown(1)) //is true
+        if (Input.GetMouseButtonDown(1) && isAlive == true) //is true
         {
             Instantiate(bullet, LaunchOffset.position, transform.rotation);
         }

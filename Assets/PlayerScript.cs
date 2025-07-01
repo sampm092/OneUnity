@@ -41,7 +41,7 @@ public class PlayerScript : MonoBehaviour
         {
             TogglePause();
         }
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && isAlive == true)
         {
             // MyRigid.velocity = Vector2.right * dash;
             if (DashCoroutine == null)
@@ -50,7 +50,7 @@ public class PlayerScript : MonoBehaviour
             }
             //when click fasten the spawn rate
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isAlive == true)
         {
             MyRigid.velocity = Vector2.left * wait;
             //fire bullet to destroy wall
