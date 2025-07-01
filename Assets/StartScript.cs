@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class StartScript : MonoBehaviour
 {
 
-    public GameObject StartMenu;
+    public GameObject StartMenuV1;
+    public GameObject StartMenuV2;
     public GameObject ExitMenu;
     // Start is called before the first frame update
     void Start()
@@ -14,9 +15,15 @@ public class StartScript : MonoBehaviour
         // Replace with your actual scene name
     }
 
-    public void StartScene()
+    public void StartSceneV1()
     {
         SceneManager.LoadScene("SampleScene"); 
+    }
+
+    
+    public void StartSceneV2()
+    {
+        SceneManager.LoadScene("Try"); 
     }
 
     public void Exit()
