@@ -44,7 +44,10 @@ public class LogicScript : MonoBehaviour
     public void Exit1()
     {
         PScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
-        PScript.TogglePause();
+        if (PScript.isPaused == true)
+        {
+            PScript.TogglePause();
+        }
         SceneManager.LoadScene("StartScene");
     }
 
@@ -57,7 +60,10 @@ public class LogicScript : MonoBehaviour
     public void Exit2()
     {
         UScript = GameObject.FindGameObjectWithTag("Player").GetComponent<UFOscript>();
-        UScript.TogglePause();
+        if (UScript.isPaused == true)
+        {
+            UScript.TogglePause();
+        }
         SceneManager.LoadScene("StartScene");
     }
 

@@ -13,7 +13,7 @@ public class UFOscript : MonoBehaviour
     public bool isAlive = true;
     public LogicScript Logic;
     private int erasePos = -10;
-    private bool isPaused = false;
+    public bool isPaused = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,11 +29,11 @@ public class UFOscript : MonoBehaviour
             Destroy(MyRigid);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space)) //is true
+        if (Input.GetKeyDown(KeyCode.Space) && isAlive) //is true
         {
             MyRigid.velocity = Vector2.up * jump;
         }
-        if (Input.GetMouseButtonDown(1) && isAlive == true) //is true
+        if (Input.GetMouseButtonDown(1) && isAlive) //is true
         {
             Instantiate(bullet, LaunchOffset.position, transform.rotation);
         }
