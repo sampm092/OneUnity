@@ -18,6 +18,8 @@ public class PlayerScript : MonoBehaviour
     private Coroutine DashCoroutine;
     public bool isPaused = false;
     private int erasePos = -10;
+    private AudioSource AuRetry;
+    private AudioClip Flap;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        AuRetry = FindObjectOfType<AudioSource>();
         if (isAlive == false)
         {
             Destroy(MyRigid);
@@ -36,6 +39,10 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isAlive) //is true
         {
             MyRigid.velocity = Vector2.up * jump;
+             if (Flap != null && AuRetry != null)
+        {
+            AuRetry.PlayOneShot(Flap);
+        }
         }
         if (Input.GetKeyDown(KeyCode.Escape) && isAlive) //is true
         {

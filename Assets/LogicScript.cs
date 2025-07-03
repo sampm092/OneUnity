@@ -11,9 +11,9 @@ public class LogicScript : MonoBehaviour
     public Text scoreText;
     public GameObject gameOverScreen;
     public bool isGameOver = false;
-    public AudioClip Over;
     public PlayerScript PScript;
     public UFOscript UScript;
+    public AudioClip Over;
     public AudioClip Retry;
     // private AudioSource AudioSource; 
     private AudioSource AuRetry;
