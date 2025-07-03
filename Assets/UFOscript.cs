@@ -14,6 +14,9 @@ public class UFOscript : MonoBehaviour
     public LogicScript Logic;
     private int erasePos = -10;
     public bool isPaused = false;
+    public AudioSource AuRetry;
+    public AudioClip Flap;
+    public AudioClip Shoot;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +27,7 @@ public class UFOscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        AuRetry = FindObjectOfType<AudioSource>();
         if (isAlive == false)
         {
             Destroy(MyRigid);
@@ -32,10 +36,18 @@ public class UFOscript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isAlive) //is true
         {
             MyRigid.velocity = Vector2.up * jump;
+            if (Flap != null && AuRetry != null)
+            {
+                AuRetry.PlayOneShot(Flap);
+            }
         }
         if (Input.GetMouseButtonDown(1) && isAlive) //is true
         {
             Instantiate(bullet, LaunchOffset.position, transform.rotation);
+            if (Shoot != null && AuRetry != null)
+            {
+                AuRetry.PlayOneShot(Shoot);
+            }
         }
         if (isAlive && MyRigid.transform.position.y < erasePos)
         {

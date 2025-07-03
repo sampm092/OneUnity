@@ -18,8 +18,8 @@ public class PlayerScript : MonoBehaviour
     private Coroutine DashCoroutine;
     public bool isPaused = false;
     private int erasePos = -10;
-    private AudioSource AuRetry;
-    private AudioClip Flap;
+    public AudioSource AuRetry;
+    public AudioClip Flap;
 
     // Start is called before the first frame update
     void Start()
@@ -39,10 +39,10 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isAlive) //is true
         {
             MyRigid.velocity = Vector2.up * jump;
-             if (Flap != null && AuRetry != null)
-        {
-            AuRetry.PlayOneShot(Flap);
-        }
+            if (Flap != null && AuRetry != null)
+            {
+                AuRetry.PlayOneShot(Flap);
+            }
         }
         if (Input.GetKeyDown(KeyCode.Escape) && isAlive) //is true
         {
@@ -94,5 +94,5 @@ public class PlayerScript : MonoBehaviour
         Time.timeScale = isPaused ? 0 : 1;
         PauseMenu.SetActive(isPaused); // Enable or disable pause menu UI
     }
-    
+
 }

@@ -1286,6 +1286,8 @@ MonoBehaviour:
   isAlive: 1
   isDashing: 0
   isPaused: 0
+  AuRetry: {fileID: 0}
+  Flap: {fileID: 8300000, guid: 4115ad19948f52d4f80035ae42e19d0e, type: 3}
 --- !u!70 &954176692
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1819,9 +1821,9 @@ MonoBehaviour:
   scoreText: {fileID: 1369816109}
   gameOverScreen: {fileID: 763370710}
   isGameOver: 0
-  Over: {fileID: 8300000, guid: 6b4ac7f7d15518344a536670a6cd8d48, type: 3}
   PScript: {fileID: 0}
   UScript: {fileID: 0}
+  Over: {fileID: 8300000, guid: 6b4ac7f7d15518344a536670a6cd8d48, type: 3}
   Retry: {fileID: 8300000, guid: ef24a4d90b6de29428d021b2b82018a3, type: 3}
 --- !u!4 &1490426737
 Transform:
