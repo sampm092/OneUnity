@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LogicScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public int score;
-    public Text scoreText;
+    public TextMeshProUGUI scoreText;
     public GameObject gameOverScreen;
     public bool isGameOver = false;
     public PlayerScript PScript;
