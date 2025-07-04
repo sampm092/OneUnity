@@ -124,6 +124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &1070458198245583698
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +252,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &1671598213679386554
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +380,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &2152206285958345493
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +508,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &2846327908572907327
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,6 +636,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &2872545005303279355
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +764,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &2905897495348666705
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +892,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &3101924596278948858
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1020,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &3114176105505660992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,6 +1148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &3843045368909927247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,6 +1276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &4935540867049616291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,6 +1404,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &5337330262176665136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,6 +1532,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &6116341788909206985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,7 +1547,7 @@ GameObject:
   - component: {fileID: 6223038385274439230}
   - component: {fileID: 7042881552809942974}
   - component: {fileID: 3273922516031777291}
-  - component: {fileID: 2449740913585203862}
+  - component: {fileID: 3319658040404860941}
   m_Layer: 0
   m_Name: Wall1 (4)
   m_TagString: Untagged
@@ -1600,7 +1648,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.46, y: 1.09}
   m_EdgeRadius: 0
---- !u!114 &2449740913585203862
+--- !u!114 &3319658040404860941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1609,11 +1657,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6116341788909206985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6c6a441aa6c17b42962ecef850c3147, type: 3}
+  m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AuRetry: {fileID: 0}
-  nodestroy: {fileID: 8300000, guid: c98662e518caa3a4e8faa7ba4b106265, type: 3}
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 8300000, guid: c98662e518caa3a4e8faa7ba4b106265, type: 3}
+  passSound: {fileID: 0}
+  walltype: 1
 --- !u!1 &6658658349337258566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,6 +1861,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &6725819505106625704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,37 +1989,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &7085017821817198125
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6848450461509279946}
-  m_Layer: 0
-  m_Name: WallScript
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6848450461509279946
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7085017821817198125}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6454429961443534735}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &7098186148125130823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2090,6 +2117,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &7701460648971504718
 GameObject:
   m_ObjectHideFlags: 0
@@ -2101,7 +2132,7 @@ GameObject:
   - component: {fileID: 6696107271111604323}
   - component: {fileID: 768432156990837534}
   - component: {fileID: 100990230167485755}
-  - component: {fileID: 7255137151374043800}
+  - component: {fileID: 894887358051074481}
   m_Layer: 0
   m_Name: Wall1 (13)
   m_TagString: Untagged
@@ -2202,7 +2233,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.46, y: 1.09}
   m_EdgeRadius: 0
---- !u!114 &7255137151374043800
+--- !u!114 &894887358051074481
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2211,11 +2242,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7701460648971504718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6c6a441aa6c17b42962ecef850c3147, type: 3}
+  m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AuRetry: {fileID: 0}
-  nodestroy: {fileID: 8300000, guid: c98662e518caa3a4e8faa7ba4b106265, type: 3}
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 8300000, guid: c98662e518caa3a4e8faa7ba4b106265, type: 3}
+  passSound: {fileID: 0}
+  walltype: 1
 --- !u!1 &7921516661903505913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,6 +2373,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &8151566968315714060
 GameObject:
   m_ObjectHideFlags: 0
@@ -2390,7 +2427,6 @@ Transform:
   - {fileID: 4598068511718262298}
   - {fileID: 5695854077254454702}
   - {fileID: 6925937460282212135}
-  - {fileID: 6848450461509279946}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2535,6 +2571,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
 --- !u!1 &8653354654165949737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,3 +2699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63f4951fa0b9664e9fded095aeffb21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyableSound: {fileID: 0}
+  undestroyableSound: {fileID: 0}
+  passSound: {fileID: 0}
+  walltype: 0
