@@ -29,7 +29,7 @@ public class UFOscript : MonoBehaviour
     void Update()
     {
         AuRetry = FindObjectOfType<AudioSource>();
-        if (isAlive == false)
+        if (isAlive == false || Logic.isGameOver)
         {
             Destroy(MyRigid);
         }
@@ -58,6 +58,11 @@ public class UFOscript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && isAlive) //is true
         {
             TogglePause();
+        }
+        // for ending
+        if (Logic.score == 20)
+        {
+            Logic.Finish();
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

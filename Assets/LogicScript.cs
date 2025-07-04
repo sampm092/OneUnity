@@ -11,6 +11,7 @@ public class LogicScript : MonoBehaviour
     public int score;
     public TextMeshProUGUI scoreText;
     public GameObject gameOverScreen;
+    public GameObject FinishScreen;
     public bool isGameOver = false;
     public PlayerScript PScript;
     public UFOscript UScript;
@@ -39,6 +40,16 @@ public class LogicScript : MonoBehaviour
         {
             AuRetry.PlayOneShot(Over);
         }
+        isGameOver = true;
+    }
+    public void Finish()
+    {
+        // AuRetry = FindObjectOfType<AudioSource>();
+        FinishScreen.SetActive(true);
+        // if (Over != null && AuRetry != null)
+        // {
+        //     AuRetry.PlayOneShot(Over);
+        // }
         isGameOver = true;
     }
 
