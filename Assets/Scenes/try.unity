@@ -299,7 +299,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8a88354c7d792f7419c61ac196ffd623, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bc8ff17e7196b644db1379c3c094492d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1807,6 +1807,7 @@ MonoBehaviour:
   AuRetry: {fileID: 0}
   Flap: {fileID: 8300000, guid: 4115ad19948f52d4f80035ae42e19d0e, type: 3}
   Shoot: {fileID: 8300000, guid: 131a89405da4c8e40a0fc8d70b327267, type: 3}
+  cant: {fileID: 0}
 --- !u!1 &1591760413
 GameObject:
   m_ObjectHideFlags: 0
