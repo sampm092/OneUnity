@@ -63,6 +63,7 @@ public class UFOscript : MonoBehaviour
         if (Logic.score == 20)
         {
             Logic.Finish();
+            isAlive = false;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

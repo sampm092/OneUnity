@@ -31,12 +31,12 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         AuRetry = FindObjectOfType<AudioSource>();
-        if (isAlive == false)
+        if (isAlive == false || Logic.isGameOver )
         {
             Destroy(MyRigid);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isAlive) //is true
+        if (Input.GetKeyDown(KeyCode.Space) && isAlive  ) //is true
         {
             MyRigid.velocity = Vector2.up * jump;
             if (Flap != null && AuRetry != null)
@@ -67,6 +67,11 @@ public class PlayerScript : MonoBehaviour
         {
             isAlive = false;
             Logic.GameOver();
+        }
+        if (Logic.score == 20)
+        {
+            Logic.Finish();
+            isAlive = false;
         }
     }
     IEnumerator Dash()
