@@ -15,10 +15,11 @@ public class LogicScript : MonoBehaviour
     public bool isGameOver = false;
     public PlayerScript PScript;
     public UFOscript UScript;
+    private AudioSource AuRetry;
+    AuRetry = FindObjectOfType<AudioSource>();
     public AudioClip Over;
     public AudioClip Retry;
-    // private AudioSource AudioSource; 
-    private AudioSource AuRetry;
+    public AudioClip Finish;
 
     [ContextMenu("Increase Score")]
     public void AddScore(int scoreAdd)
@@ -34,7 +35,7 @@ public class LogicScript : MonoBehaviour
 
     public void GameOver()
     {
-        AuRetry = FindObjectOfType<AudioSource>();
+        // AuRetry = FindObjectOfType<AudioSource>();
         gameOverScreen.SetActive(true);
         if (Over != null && AuRetry != null)
         {
@@ -46,10 +47,10 @@ public class LogicScript : MonoBehaviour
     {
         // AuRetry = FindObjectOfType<AudioSource>();
         FinishScreen.SetActive(true);
-        // if (Over != null && AuRetry != null)
-        // {
-        //     AuRetry.PlayOneShot(Over);
-        // }
+        if (Finish != null && AuRetry != null)
+        {
+            AuRetry.PlayOneShot(Finish);
+        }
         isGameOver = true;
     }
 

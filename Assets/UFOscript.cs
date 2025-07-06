@@ -17,7 +17,7 @@ public class UFOscript : MonoBehaviour
     public AudioSource AuRetry;
     public AudioClip Flap;
     public AudioClip Shoot;
-    public AudioClip cant; //for red wall and update sound
+    public AudioClip cant; 
 
     // Start is called before the first frame update
     void Start()
