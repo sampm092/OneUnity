@@ -17,7 +17,8 @@ public class PlayerScript : MonoBehaviour
     public bool isDashing = false;
     private Coroutine DashCoroutine;
     public bool isPaused = false;
-    private int erasePos = -10;
+    private int erasePosDown = -10;
+    private int erasePosUp = 15;
     public AudioSource AuRetry;
     public AudioClip Flap;
 
@@ -63,7 +64,12 @@ public class PlayerScript : MonoBehaviour
             //fire bullet to destroy wall
         }
 
-        if (isAlive && MyRigid.transform.position.y < erasePos)
+        if (isAlive && MyRigid.transform.position.y < erasePosDown)
+        {
+            isAlive = false;
+            Logic.GameOver();
+        }
+        if (isAlive && MyRigid.transform.position.y < erasePosUp)
         {
             isAlive = false;
             Logic.GameOver();

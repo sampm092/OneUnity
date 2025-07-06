@@ -12,7 +12,8 @@ public class UFOscript : MonoBehaviour
     public Transform LaunchOffset;
     public bool isAlive = true;
     public LogicScript Logic;
-    private int erasePos = -10;
+    private int erasePosDown = -10;
+    private int erasePosUp = 15;
     public bool isPaused = false;
     public AudioSource AuRetry;
     public AudioClip Flap;
@@ -50,7 +51,12 @@ public class UFOscript : MonoBehaviour
                 AuRetry.PlayOneShot(Shoot);
             }
         }
-        if (isAlive && MyRigid.transform.position.y < erasePos)
+        if (isAlive && MyRigid.transform.position.y < erasePosDown)
+        {
+            isAlive = false;
+            Logic.GameOver();
+        }
+        if (isAlive && MyRigid.transform.position.y < erasePosUp)
         {
             isAlive = false;
             Logic.GameOver();
