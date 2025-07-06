@@ -18,7 +18,7 @@ public class PlayerScript : MonoBehaviour
     private Coroutine DashCoroutine;
     public bool isPaused = false;
     private int erasePosDown = -10;
-    private int erasePosUp = 15;
+    private int erasePosUp = 9;
     public AudioSource AuRetry;
     public AudioClip Flap;
 
@@ -69,7 +69,7 @@ public class PlayerScript : MonoBehaviour
             isAlive = false;
             Logic.GameOver();
         }
-        if (isAlive && MyRigid.transform.position.y < erasePosUp)
+        if (isAlive && MyRigid.transform.position.y > erasePosUp)
         {
             isAlive = false;
             Logic.GameOver();
