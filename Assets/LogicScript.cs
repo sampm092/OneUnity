@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LogicScript : MonoBehaviour
 {
@@ -16,10 +16,9 @@ public class LogicScript : MonoBehaviour
     public PlayerScript PScript;
     public UFOscript UScript;
     private AudioSource AuRetry;
-    AuRetry = FindObjectOfType<AudioSource>();
     public AudioClip Over;
     public AudioClip Retry;
-    public AudioClip Finish;
+    public AudioClip FinishSfx;
 
     [ContextMenu("Increase Score")]
     public void AddScore(int scoreAdd)
@@ -35,7 +34,7 @@ public class LogicScript : MonoBehaviour
 
     public void GameOver()
     {
-        // AuRetry = FindObjectOfType<AudioSource>();
+        AuRetry = FindObjectOfType<AudioSource>();
         gameOverScreen.SetActive(true);
         if (Over != null && AuRetry != null)
         {
@@ -43,13 +42,14 @@ public class LogicScript : MonoBehaviour
         }
         isGameOver = true;
     }
+
     public void Finish()
     {
-        // AuRetry = FindObjectOfType<AudioSource>();
+        AuRetry = FindObjectOfType<AudioSource>();
         FinishScreen.SetActive(true);
-        if (Finish != null && AuRetry != null)
+        if (FinishSfx != null && AuRetry != null)
         {
-            AuRetry.PlayOneShot(Finish);
+            AuRetry.PlayOneShot(FinishSfx);
         }
         isGameOver = true;
     }
@@ -96,7 +96,4 @@ public class LogicScript : MonoBehaviour
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-
-
 }

@@ -17,7 +17,7 @@ public class UFOscript : MonoBehaviour
     public AudioSource AuRetry;
     public AudioClip Flap;
     public AudioClip Shoot;
-    public AudioClip cant; 
+    public AudioClip cant;
 
     // Start is called before the first frame update
     void Start()
@@ -60,18 +60,19 @@ public class UFOscript : MonoBehaviour
             TogglePause();
         }
         // for ending
-        if (Logic.score == 20)
+        if (Logic.score == 20 && isAlive == true)
         {
             Logic.Finish();
             isAlive = false;
         }
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isAlive = false;
         Logic.GameOver();
-
     }
+
     public void TogglePause()
     {
         isPaused = !isPaused;
@@ -79,6 +80,4 @@ public class UFOscript : MonoBehaviour
         Time.timeScale = isPaused ? 0 : 1;
         PauseMenu.SetActive(isPaused); // Enable or disable pause menu UI
     }
-
-
 }

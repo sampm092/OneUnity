@@ -2325,6 +2325,7 @@ MonoBehaviour:
   UScript: {fileID: 0}
   Over: {fileID: 8300000, guid: 6b4ac7f7d15518344a536670a6cd8d48, type: 3}
   Retry: {fileID: 8300000, guid: ef24a4d90b6de29428d021b2b82018a3, type: 3}
+  FinishSfx: {fileID: 8300000, guid: 6f1a6f31b37bd66409fda89e5c498e3e, type: 3}
 --- !u!4 &1490426737
 Transform:
   m_ObjectHideFlags: 0

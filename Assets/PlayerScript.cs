@@ -31,12 +31,12 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         AuRetry = FindObjectOfType<AudioSource>();
-        if (isAlive == false || Logic.isGameOver )
+        if (isAlive == false || Logic.isGameOver)
         {
             Destroy(MyRigid);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isAlive  ) //is true
+        if (Input.GetKeyDown(KeyCode.Space) && isAlive) //is true
         {
             MyRigid.velocity = Vector2.up * jump;
             if (Flap != null && AuRetry != null)
@@ -68,17 +68,18 @@ public class PlayerScript : MonoBehaviour
             isAlive = false;
             Logic.GameOver();
         }
-        if (Logic.score == 20)
+        if (Logic.score == 20 && isAlive == true)
         {
             Logic.Finish();
             isAlive = false;
         }
     }
+
     IEnumerator Dash()
     {
         isDashing = true;
         // float originalGravity = MyRigid.gravityScale;
-        MyRigid.velocity = new Vector2(dash, 0); //move horizontally 
+        MyRigid.velocity = new Vector2(dash, 0); //move horizontally
 
         yield return new WaitForSeconds(dashTime);
 
@@ -90,8 +91,8 @@ public class PlayerScript : MonoBehaviour
     {
         isAlive = false;
         Logic.GameOver();
-
     }
+
     public void TogglePause()
     {
         isPaused = !isPaused;
@@ -99,5 +100,4 @@ public class PlayerScript : MonoBehaviour
         Time.timeScale = isPaused ? 0 : 1;
         PauseMenu.SetActive(isPaused); // Enable or disable pause menu UI
     }
-
 }

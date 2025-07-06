@@ -6,6 +6,7 @@ public class BulletScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public float Speed = 20f;
+
     // Update is called once per frame
     void Update()
     {
